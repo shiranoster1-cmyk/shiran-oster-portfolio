@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shiran Oster — Industrial Design</title>
+  <meta name="description" content="Industrial design portfolio of Shiran Oster.">
+  <meta name="theme-color" content="#FDF3F1">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='11' fill='%2320BDB4'/%3E%3C/svg%3E">
+  <link rel="preload" href="assets/fonts/Rubik-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/img/hero/senin.png" as="image">
+  <link rel="preload" href="assets/img/hero/scoop.png" as="image">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a class="brand" href="#top" data-link aria-label="Shiran Oster — home">
+        <span class="brand-name">SHIRAN OSTER</span>
+        <span class="brand-line" aria-hidden="true"></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">
+        <span class="menu-toggle-lines" aria-hidden="true"></span>
+        <span class="visually-hidden" data-i18n="nav.menu">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Main">
+        <a href="#projects" data-link data-nav="projects" data-i18n="nav.projects">Projects</a>
+        <a href="#about" data-link data-nav="about" data-i18n="nav.about">About Me</a>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="en" lang="en">EN</button>
+          <span class="lang-slash" aria-hidden="true">/</span>
+          <button type="button" data-lang="he" lang="he">HE</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ═════════ Home view ═════════ -->
+    <div id="homeView">
+
+      <!-- Opening screen. Product images: assets/img/hero/ (built by tools/prepare-hero.ps1
+           from Design/hero-sources/). -->
+      <section class="hero" id="top" aria-labelledby="heroTitle">
+        <div class="hero-art" aria-hidden="true">
+          <span class="hero-arc hero-arc--left"></span>
+          <span class="hero-arc hero-arc--right"></span>
+          <div class="hero-product hero-product--scoop" data-depth="-14">
+            <img src="assets/img/hero/scoop.png" width="1674" height="722" alt="">
+          </div>
+          <div class="hero-product hero-product--senin" data-depth="18">
+            <img src="assets/img/hero/senin.png" width="900" height="1500" alt="">
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <h1 class="hero-title" id="heroTitle"></h1>
+          <p class="hero-keywords" id="heroKeywords" lang="en" dir="ltr"></p>
+        </div>
+
+        <a class="hero-scroll" href="#projects" data-link>
+          <span class="visually-hidden" data-i18n="hero.scroll">Scroll to projects</span>
+          <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+            <path d="M8 9 L20 20 L32 9" /><path d="M8 20 L20 31 L32 20" />
+          </svg>
+        </a>
+      </section>
+
+      <section class="projects" id="projects" aria-labelledby="projectsTitle">
+        <div class="container">
+          <header class="section-head reveal">
+            <h2 class="section-title" id="projectsTitle"><span data-i18n="projects.title">Projects</span><span class="dot" aria-hidden="true"></span></h2>
+            <span class="section-count" id="projectCount" dir="ltr"></span>
+          </header>
+          <div class="project-grid" id="projectGrid"></div>
+        </div>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="aboutTitle">
+        <div class="container about-inner">
+          <header class="about-head reveal">
+            <h2 class="section-title" id="aboutTitle"><span data-i18n="about.title">About Me</span><span class="dot" aria-hidden="true"></span></h2>
+          </header>
+          <div class="about-body reveal" id="aboutBody"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ═════════ Project page (rendered by js/app.js) ═════════ -->
+    <article id="projectView" class="project-view" hidden></article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> <span data-i18n="footer.rights">Shiran Oster</span></span>
+      <a href="#top" data-link class="footer-top"><span data-i18n="footer.top">Back to top</span> <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <!-- Cursor follower (mouse devices only) -->
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-label" id="cursorLabel"></span></div>
+
+  <script src="js/content/site.js"></script>
+  <script src="js/content/projects.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
